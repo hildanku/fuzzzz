@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func main() {
+func mainx() {
 	if len(os.Args) < 3 {
 		fmt.Println("Usage: go run main.go <target URL> <wordlist file>")
 		return
@@ -27,8 +27,8 @@ func main() {
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		path := scanner.Text()
-		//url := fmt.Sprintf("%s/%s", target, path)
-	
+		// url := fmt.Sprintf("%s/%s", target, path)
+
 		parsedURL, err := url.Parse(target)
 		if err != nil {
 			fmt.Printf("Error parsing URL: %v\n", err)
